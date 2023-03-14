@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             (unknown)
-// source: remote_action/remote_action.proto
+// source: protos/remote_action/v1/remote_action.proto
 
 package remote_action_v1
 
@@ -101,5 +101,5 @@ var RemoteActionService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "remote_action/remote_action.proto",
+	Metadata: "protos/remote_action/v1/remote_action.proto",
 }
