@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package remote_action;
+
+option go_package = "github.com/MatthewSerre/hyundai-bluelink-protobufs/remote_action/v1;remote_action_v1";
+
+service RemoteActionService {
+    rpc ToggleLock(ToggleLockRequest) returns (RemoteActionResponse);
+}
+
+enum LockAction {
+    LOCK_ACTION_UNSPECIFIED = 0;
+    LOCK_ACTION_LOCK = 1;
+    LOCK_ACTION_UNLOCK = 2;
+  }
+  
+
+message ToggleLockRequest {
+    string username = 1;
+    string pin = 2;
+    string jwt_token = 3;
+    LockAction lock_action = 4;
+}
+
+message ResponseString {
+    string error_sub_code = 1;
+    string system_name = 2;
+    string function_name = 3;
+    string error_message = 4;
+    int32 error_code = 5;
+    string service_name = 6;
+}
+
+message RemoteActionResponse {
+    string result = 1;
+    string fail_msg = 2;
+    ResponseString response_string = 3;
+}

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package information;
 
-option go_package = "github.com/MatthewSerre/car/information/v1;information_v1";
+option go_package = "github.com/MatthewSerre/hyundai-bluelink-protobufs/information/v1;information_v1";
 
 service InformationService {
     rpc GetVehicleInfo(VehicleInfoRequest) returns (VehicleInfoResponse);
