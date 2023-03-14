@@ -19,7 +19,10 @@ message ToggleLockRequest {
     string username = 1;
     string pin = 2;
     string jwt_token = 3;
-    LockAction lock_action = 4;
+    string registration_id = 4;
+    string vin = 5;
+    string generation = 6;
+    LockAction lock_action = 7;
 }
 
 message ResponseString {
